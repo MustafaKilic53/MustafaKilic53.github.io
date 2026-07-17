@@ -1,0 +1,236 @@
+/* styles.css */
+
+:root {
+  --navy: #1f3a5f;
+  --navy-dark: #16263f;
+  --green: #7cb342;
+  --green-hover: #6aa036;
+  --req: #4caf50;
+  --placeholder: #9aa0a6;
+  --border: #1f3a5f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 40px 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.form-container {
+  background-color: #fff;
+  padding: 32px 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 620px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top stacked fields (Name, Email, Company, Mode of Transport) */
+.field {
+  margin-bottom: 18px;
+}
+
+.field > label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 700;
+  color: var(--navy);
+  font-size: 15px;
+}
+
+.req {
+  color: var(--req);
+  font-weight: 700;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 15px;
+  color: var(--navy-dark);
+  background-color: #fff;
+}
+
+input::placeholder {
+  color: var(--placeholder);
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  font-weight: 700;
+  color: var(--navy);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%231f3a5f' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 34px;
+  cursor: pointer;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--green);
+}
+
+/* Divider above Shipment Details */
+.divider {
+  border: none;
+  border-top: 1px solid #d7dbe0;
+  margin: 6px 0 20px;
+}
+
+.section-title {
+  color: var(--navy);
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 18px;
+}
+
+/* Inline label + input rows under Shipment Details */
+.field-inline {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  align-items: center;
+  column-gap: 12px;
+  margin-bottom: 16px;
+}
+
+.field-inline > label {
+  font-weight: 400;
+  color: var(--navy);
+  font-size: 15px;
+  margin: 0;
+}
+
+/* FCL / LCL radio row (Sea Freight) */
+.radio-row {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin: -6px 0 20px;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  color: var(--navy);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.radio-option input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--green);
+  cursor: pointer;
+}
+
+/* Dimension per Package row */
+.dim-title {
+  display: block;
+  color: var(--navy);
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.dim-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dim-row label {
+  color: var(--navy);
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.dim-row input {
+  width: auto;
+  min-width: 0;
+  flex: 1;
+}
+
+/* Submit button */
+.submit-btn {
+  align-self: flex-start;
+  margin-top: 8px;
+  padding: 11px 26px;
+  background-color: var(--green);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: var(--green-hover);
+}
+
+/* Consent */
+.consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.consent input[type="radio"] {
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.consent-text {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--navy);
+  font-weight: 400;
+}
+
+.consent-text a {
+  color: var(--navy);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+@media (max-width: 520px) {
+  .field-inline {
+    grid-template-columns: 1fr;
+    row-gap: 6px;
+  }
+  .form-container {
+    padding: 24px 20px;
+  }
+  .dim-row {
+    flex-wrap: wrap;
+  }
+  .dim-row input {
+    flex: 1 1 80px;
+  }
+}

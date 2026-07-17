@@ -1,86 +1,239 @@
 <!DOCTYPE html>
-<html lang="tr">
-  <head>
-      <meta charSet="utf-8"/>
-      <meta name="viewport" content="width=device-width, initial-scale=1"/>
-      <link rel="preload" as="image" href="/assets/logo.png"/>
-      <link rel="stylesheet" href="/_next/static/css/6e3311f6ce7ebc61.css" data-precedence="next"/>
-      <link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-c81f7fd28659d64f.js"/>
-      <script src="/_next/static/chunks/fd9d1056-ce9145d97e2df42a.js" async=""></script>
-      <script src="/_next/static/chunks/117-e8ab78372ea21582.js" async=""></script>
-      <script src="/_next/static/chunks/main-app-70b2e491f0f64020.js" async=""></script>
-      <script src="/_next/static/chunks/648-0918c163886d2f90.js" async=""></script>
-      <script src="/_next/static/chunks/983-f34d8931d0a70b78.js" async=""></script>
-      <script src="/_next/static/chunks/app/login/page-ad90c8982a85b710.js" async=""></script>
-      <script src="/_next/static/chunks/app/layout-3a503a6eb54c24b2.js" async=""></script>
-      <link rel="preconnect" href="https://fonts.googleapis.com"/>
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
-      <title>PCS Transit &amp;Gümrükleme — T1 / T2 / TR Beyan ve Gümrük Operasyonları</title>
-      <meta name="description" content="Türkiye ve Avrupa gümrük sistemleriyle entegre, T1/T2/TR transit beyan, teminat yönetimi ve gümrükleme platformu."/>
-      <link rel="icon" href="/assets/logo.png"/>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=Geist+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;display=swap"/>
-      <script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script>
-  </head>
-  <body>
-      <div class="login-wrap">
-          <a class="login-back" href="/">← 
-          <!-- -->
-          Anasayfaya dön</a>
-          <div class="login-card">
-              <div class="login-logo">
-                  <img src="/assets/logo.png" alt="PCS Transit"/>
-              </div>
-              <h2>NCTS Müşteri Portalı</h2>
-              <p class="sub">PCS Transit &amp;Gümrükleme müşteri panelinize giriş yapın.</p>
-              <form id="new_user" action="https://app.modaltrans.com/sessions" method="post">
-                  <input type="hidden" name="user[pt]" value="r8mURoirBXQWt7TWPmEjBg"/>
-                  <div class="field">
-                      <label for="user_email">E‑posta Adresi</label>
-                      <input id="user_email" type="email" placeholder="ornek@firma.com" required="" name="user[email]"/>
-                  </div>
-                  <div class="field">
-                      <label for="user_password">Şifre</label>
-                      <input id="user_password" type="password" placeholder="••••••••" required="" name="user[password]"/>
-                  </div>
-                  <div class="row">
-                      <label>
-                          <input type="checkbox"/>
-                          <!-- -->
-                          Beni hatırla
-                      </label>
-                      <a href="https://app.modaltrans.com/password_resets/new?pt=r8mURoirBXQWt7TWPmEjBg" target="_blank" rel="noopener">Şifremi unuttum</a>
-                  </div>
-                  <button type="submit" class="submit">
-                      Giriş Yap<span style="font-family:var(--font-mono)">→</span>
-                  </button>
-              </form>
-              <div class="footer-note">
-                  Hesabınız yok mu?
-                  <!-- -->
-                  <a href="/contact">Bizimle iletişime geçin</a>
-                  <br/>
-                  <span style="opacity:0.6;margin-top:8px;display:inline-block">🔒 
-                  <!-- -->
-                  Güvenli giriş · Modaltrans altyapısı</span>
-              </div>
-          </div>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modaltrans Web Request Quote</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="form-container">
+    <form action="https:///app.modaltrans.com/roster/web_request_quotes" method="post">
+
+      <input type="hidden" id="patron_token" name="web_request_quote[patron_token]" value="Y_D96kOpGcnwdfKg-9Bx0w" required>
+
+      <input type="hidden" name="web_request_quote[datas][lead_class]" value="standard">
+      <input type="hidden" name="web_request_quote[datas][origin_country_id]" value="TR">
+      <input type="hidden" name="web_request_quote[datas][destination_country_id]" value="TR">
+
+      <div class="field">
+        <label for="name">Name <span class="req">*</span></label>
+        <input type="text" id="name" name="web_request_quote[name]" placeholder="John Smith" required>
       </div>
-      <script src="/_next/static/chunks/webpack-c81f7fd28659d64f.js" async=""></script>
-      <script>
-          (self.__next_f = self.__next_f || []).push([0]);
-          self.__next_f.push([2, null])
-      </script>
-      <script>
-          self.__next_f.push([1, "1:HL[\"/_next/static/css/6e3311f6ce7ebc61.css\",\"style\"]\n"])
-      </script>
-      <script>
-          self.__next_f.push([1, "2:I[2846,[],\"\"]\n4:I[9107,[],\"ClientPageRoot\"]\n5:I[223,[\"648\",\"static/chunks/648-0918c163886d2f90.js\",\"983\",\"static/chunks/983-f34d8931d0a70b78.js\",\"626\",\"static/chunks/app/login/page-ad90c8982a85b710.js\"],\"default\",1]\n6:I[4707,[],\"\"]\n7:I[6423,[],\"\"]\n8:I[3983,[\"983\",\"static/chunks/983-f34d8931d0a70b78.js\",\"185\",\"static/chunks/app/layout-3a503a6eb54c24b2.js\"],\"LangProvider\"]\na:I[1060,[],\"\"]\nb:[]\n"])
-      </script>
-      <script>
-          self.__next_f.push([1, "0:[\"$\",\"$L2\",null,{\"buildId\":\"QHsr7mXivINqoXgp8FPG0\",\"assetPrefix\":\"\",\"urlParts\":[\"\",\"login\"],\"initialTree\":[\"\",{\"children\":[\"login\",{\"children\":[\"__PAGE__\",{}]}]},\"$undefined\",\"$undefined\",true],\"initialSeedData\":[\"\",{\"children\":[\"login\",{\"children\":[\"__PAGE__\",{},[[\"$L3\",[\"$\",\"$L4\",null,{\"props\":{\"params\":{},\"searchParams\":{}},\"Component\":\"$5\"}],null],null],null]},[null,[\"$\",\"$L6\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\",\"login\",\"children\"],\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L7\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"notFoundStyles\":\"$undefined\"}]],null]},[[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/6e3311f6ce7ebc61.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"tr\",\"children\":[[\"$\",\"head\",null,{\"children\":[[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.googleapis.com\"}],[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.gstatic.com\",\"crossOrigin\":\"\"}],[\"$\",\"link\",null,{\"rel\":\"stylesheet\",\"href\":\"https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700\u0026family=Geist+Mono:wght@400;500\u0026family=Instrument+Serif:ital@0;1\u0026display=swap\"}]]}],[\"$\",\"body\",null,{\"children\":[\"$\",\"$L8\",null,{\"children\":[\"$\",\"$L6\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\"],\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L7\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":\"404\"}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],\"notFoundStyles\":[]}]}]}]]}]],null],null],\"couldBeIntercepted\":false,\"initialHead\":[null,\"$L9\"],\"globalErrorComponent\":\"$a\",\"missingSlots\":\"$Wb\"}]\n"])
-      </script>
-      <script>
-          self.__next_f.push([1, "9:[[\"$\",\"meta\",\"0\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}],[\"$\",\"meta\",\"1\",{\"charSet\":\"utf-8\"}],[\"$\",\"title\",\"2\",{\"children\":\"PCS Transit \u0026 Gümrükleme — T1 / T2 / TR Beyan ve Gümrük Operasyonları\"}],[\"$\",\"meta\",\"3\",{\"name\":\"description\",\"content\":\"Türkiye ve Avrupa gümrük sistemleriyle entegre, T1/T2/TR transit beyan, teminat yönetimi ve gümrükleme platformu.\"}],[\"$\",\"link\",\"4\",{\"rel\":\"icon\",\"href\":\"/assets/logo.png\"}]]\n3:null\n"])
-      </script>
-  </body>
+
+      <div class="field">
+        <label for="email">Email <span class="req">*</span></label>
+        <input type="email" id="email" name="web_request_quote[email]" placeholder="Example@email.com" required>
+      </div>
+
+      <div class="field">
+        <label for="company_name">Company <span class="req">*</span></label>
+        <input type="text" id="company_name" name="web_request_quote[company_name]" placeholder="Company name" required>
+      </div>
+
+      <div class="field">
+        <label for="tax_no">Tax No</label>
+        <input type="text" id="tax_no" name="web_request_quote[tax_no]" placeholder="Tax number">
+      </div>
+
+      <div class="field">
+        <label for="trans_mode">Mode of Transport <span class="req">*</span></label>
+        <select id="trans_mode" name="web_request_quote[datas][trans_mode]" required>
+          <option value="" disabled selected>Select</option>
+          <option value="sea">Sea Freight</option>
+          <option value="air">Air Freight</option>
+          <option value="road">Road</option>
+          <option value="courier">Courier</option>
+        </select>
+      </div>
+
+      <div class="field radio-row" data-show="sea-fcl sea-lcl">
+        <label class="radio-option">
+          <input type="radio" name="web_request_quote[datas][full_partial]" value="full" checked> FCL
+        </label>
+        <label class="radio-option">
+          <input type="radio" name="web_request_quote[datas][full_partial]" value="partial"> LCL
+        </label>
+      </div>
+
+      <div class="field field-inline" data-show="road">
+        <label for="full_partial_road">Full trailer load or Less trailer load</label>
+        <select id="full_partial_road" name="web_request_quote[datas][full_partial]">
+          <option value="full">FTL</option>
+          <option value="partial">LTL</option>
+        </select>
+      </div>
+
+      <div data-show="air courier">
+        <input type="hidden" name="web_request_quote[datas][full_partial]" value="partial">
+      </div>
+
+      <div class="field field-inline" data-show="sea-fcl sea-lcl air">
+        <label for="origin_port">Origin port</label>
+        <input type="text" id="origin_port" name="web_request_quote[datas][origin_port]">
+      </div>
+
+      <div class="field field-inline" data-show="sea-fcl sea-lcl air">
+        <label for="destination_port">Destination port</label>
+        <input type="text" id="destination_port" name="web_request_quote[datas][destination_port]">
+      </div>
+
+      <div class="field field-inline" data-show="sea-fcl">
+        <label for="container_size">Container Size</label>
+        <select id="container_size" name="web_request_quote[datas][container_size]">
+          <option value="20DC">20DC</option>
+          <option value="40DC">40DC</option>
+          <option value="40HQ">40HQ</option>
+          <option value="45HQ">45HQ</option>
+        </select>
+      </div>
+
+      <div class="field field-inline" data-show="sea-fcl">
+        <label for="container_count">No. of Containers</label>
+        <input type="number" id="container_count" name="web_request_quote[datas][container_count]" min="1">
+      </div>
+
+      <div class="field field-inline" data-show="sea-lcl air courier">
+        <label for="total_package">No. of Packages</label>
+        <input type="number" id="total_package" name="web_request_quote[datas][total_package]" min="1">
+      </div>
+
+      <div class="field field-inline" data-show="sea-lcl air">
+        <label for="total_weight">Total Weight</label>
+        <input type="number" id="total_weight" name="web_request_quote[datas][total_weight]" min="0" step="0.01">
+      </div>
+
+      <div class="field" data-show="sea-lcl air road courier">
+        <span class="dim-title">Dimension per Package</span>
+        <div class="dim-row">
+          <label for="dimension1">Length</label>
+          <input type="number" id="dimension1" name="web_request_quote[datas][dimension1]" min="0" step="0.01">
+          <label for="dimension2">Width</label>
+          <input type="number" id="dimension2" name="web_request_quote[datas][dimension2]" min="0" step="0.01">
+          <label for="dimension3">Height</label>
+          <input type="number" id="dimension3" name="web_request_quote[datas][dimension3]" min="0" step="0.01">
+        </div>
+      </div>
+
+      <div class="field field-inline" data-show="sea-lcl air road courier">
+        <label for="gross_weight">Gross Weight</label>
+        <input type="number" id="gross_weight" name="web_request_quote[datas][gross_weight]" min="0" step="0.01">
+      </div>
+
+      <hr class="divider">
+
+      <h3 class="section-title">Shipment Details</h3>
+
+      <div class="field field-inline">
+        <label for="cargo_ready_date">Cargo ready date</label>
+        <input type="date" id="cargo_ready_date" name="web_request_quote[datas][cargo_ready_date]">
+      </div>
+
+      <div class="field field-inline">
+        <label for="incoterms">Incoterms</label>
+        <select id="incoterms" name="web_request_quote[datas][incoterms]">
+          <option value="" disabled selected>Select</option>
+          <option value="CFR">CFR</option>
+          <option value="CIF">CIF</option>
+          <option value="CIP">CIP</option>
+          <option value="CPT">CPT</option>
+          <option value="DAP">DAP</option>
+          <option value="DAT">DAT</option>
+          <option value="DDP">DDP</option>
+          <option value="DDU">DDU</option>
+          <option value="DPU">DPU</option>
+          <option value="EXW">EXW</option>
+          <option value="FAS">FAS</option>
+          <option value="FCA">FCA</option>
+          <option value="FOB">FOB</option>
+          <option value="FOR">FOR</option>
+          <option value="FOT">FOT</option>
+        </select>
+      </div>
+
+      <div class="field field-inline" data-show="sea-fcl sea-lcl air">
+        <label for="origin_address">Collection address <span class="req">*</span></label>
+        <input type="text" id="origin_address" name="web_request_quote[datas][origin_address]" required>
+      </div>
+
+      <div class="field field-inline" data-show="sea-fcl sea-lcl air">
+        <label for="destination_address">Delivery address <span class="req">*</span></label>
+        <input type="text" id="destination_address" name="web_request_quote[datas][destination_address]" required>
+      </div>
+
+      <div class="field field-inline" data-show="road courier">
+        <label for="origin_address_rc">Origin port</label>
+        <input type="text" id="origin_address_rc" name="web_request_quote[datas][origin_address]" required>
+      </div>
+
+      <div class="field field-inline" data-show="road courier">
+        <label for="destination_address_rc">Destination port</label>
+        <input type="text" id="destination_address_rc" name="web_request_quote[datas][destination_address]" required>
+      </div>
+
+      <div class="field field-inline">
+        <label for="other_services">Other services</label>
+        <input type="text" id="other_services" name="web_request_quote[datas][other_services]">
+      </div>
+
+      <input type="hidden" id="redirect_url" name="web_request_quote[redirect_url]" value="https://supremefreight.com/" required>
+
+      <div mdl-web-request="recaptcha"></div>
+
+      <button type="submit" class="submit-btn">SUBMIT</button>
+
+      <div class="consent">
+        <input type="radio" id="consent" name="consent" required>
+        <label for="consent" class="consent-text">
+          I consent to my submitted data being collected and stored via this form. The submitted
+          data in this form collects your full name, email address, phone number, company, freight
+          services and message. Please <a href="#">click here</a> to view more information about how we protect
+          and manage your submitted data.
+        </label>
+      </div>
+
+    </form>
+  </div>
+
+  <script>
+    (function () {
+      var modeSelect = document.getElementById('trans_mode');
+      var fclRadios = document.querySelectorAll('.radio-row input[type="radio"]');
+      var sections = document.querySelectorAll('[data-show]');
+
+      function currentState() {
+        var mode = modeSelect.value;
+        if (mode === 'sea') {
+          var checked = document.querySelector('.radio-row input[type="radio"]:checked');
+          return (checked && checked.value === 'partial') ? 'sea-lcl' : 'sea-fcl';
+        }
+        return mode;
+      }
+
+      function refresh() {
+        var state = currentState();
+        sections.forEach(function (section) {
+          var visible = section.getAttribute('data-show').split(' ').indexOf(state) !== -1;
+          section.style.display = visible ? '' : 'none';
+          section.querySelectorAll('input, select').forEach(function (el) {
+            el.disabled = !visible;
+          });
+        });
+      }
+
+      modeSelect.addEventListener('change', refresh);
+      fclRadios.forEach(function (radio) { radio.addEventListener('change', refresh); });
+      refresh();
+      window.addEventListener('pageshow', function () {
+        modeSelect.form.reset();
+        refresh();
+      });
+    })();
+  </script>
+
+  <script src="https:///app.modaltrans.com/roster/web_requests/cdn.js"></script>
+</body>
+
 </html>
